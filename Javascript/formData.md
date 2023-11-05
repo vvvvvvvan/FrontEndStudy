@@ -1,5 +1,15 @@
 FormData 객체는 fetch 등의 네트워크 메서드를 통해 HTML 폼을 보내는데 사용된다.
 
+```js
+let formData = new FormData([form]);
+```
+
+파일 여부나 추가 필드 여부 등과 상관없이 통용되는 HTML 폼(form) 전송 방법이다.
+
+서버 관점에선 formData를 사용한 방식과 일반 폼 전송 방식에 차이가 없다.
+
+
+
 FormData 객체는 HTML 폼(form)을 직접 넘겨 new FormData(form)으로 만들 수도 있고, HTML 폼 없이 다음과 같은 메서드로 필드를 추가해 만들 수도 있다.
 
 formData.append(name, value)

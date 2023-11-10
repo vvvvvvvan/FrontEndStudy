@@ -94,19 +94,19 @@ DOM은 자바스크립트 없이 DOM 인터페이스 구현만으로도 DOM을 �
 자바스크립트로 DOM에 접근하는 방법은, DOM의 인터페이스를 이용하여 접근할 수 있다.
 기본적으로 브라우저 내부에 내장된 프로그래밍 언어(즉 자바스크립트)가 DOM의 API 중 자주 쓰는 메소드와 프로퍼티가 있는데,
 
-document.querySelectorAll(selectors)
-document.getElementById(id)
-document.getElementByTagName(name)
-document.createElement(name)
-node.append(node)
-node.appendChild(node)
-node.remove(node)
-node.removeChild(node)
-element.innerHTML
-node.textContent
-element.setAttribute(name, value)
-element.getAttribute(name)
-element.addEventListener(type, listener)
+* document.querySelectorAll(selectors)
+* document.getElementById(id)
+* document.getElementByTagName(name)
+* document.createElement(name)
+* node.append(node)
+* node.appendChild(node)
+* node.remove(node)
+* node.removeChild(node)
+* element.innerHTML
+* node.textContent
+* element.setAttribute(name, value)
+* element.getAttribute(name)
+* element.addEventListener(type, listener)
 
 등이 있다.
 

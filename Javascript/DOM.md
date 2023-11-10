@@ -127,9 +127,9 @@ DOM 노드는 종류에 따라 대응하는 내장 클래스가 다르다.
 nextsibling, childNodes 등의 주요 트리 탐색 기능을 제공한다. Node 클래스의 객체는 절대 생성되지 않는다.
 하지만 이 클래스를 상속받는 클래스는 여럿 있다. 텍스트 노드를 위한 Text 클래스와 요소 노드를 위한 Element 클래스, 주석 노드를 위한 Comment 클래스는 Node 클래스를 상속받는다.
 
-*Element - DOM 요소를 위한 베이스 클래스이다. nextElementSibling, children이나 getElementByTagName, QuerySelector 같이 요소 전용 탐색을 도와주는 프로퍼티나 메서드가 이를 기반으로 한다. 브라우저는 HTML 뿐만 아니라 XML, SVG도 지원하는데 Element 클래스는 이와 관련된 SVGElement, XMLElement, HTMLElement 클래스의 베이스 역할을 한다.
+* Element - DOM 요소를 위한 베이스 클래스이다. nextElementSibling, children이나 getElementByTagName, QuerySelector 같이 요소 전용 탐색을 도와주는 프로퍼티나 메서드가 이를 기반으로 한다. 브라우저는 HTML 뿐만 아니라 XML, SVG도 지원하는데 Element 클래스는 이와 관련된 SVGElement, XMLElement, HTMLElement 클래스의 베이스 역할을 한다.
 
-*HTMLElement - HTMl 요소 노드의 베이스 역할을 하는 클래스이다. 아래 나열한 클래스들은 실제 HTMl 요소에 대응하고 HTMLElement를 상속받는다.
+* HTMLElement - HTMl 요소 노드의 베이스 역할을 하는 클래스이다. 아래 나열한 클래스들은 실제 HTMl 요소에 대응하고 HTMLElement를 상속받는다.
 
 이렇게 특정 노드에서 사용할 수 있는 프로퍼티와 메서드는 상속을 기반으로 결정된다.
 

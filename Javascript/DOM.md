@@ -4,7 +4,7 @@
 
 문서 객체 모델, 즉 DOM은 웹 페이지(HTML이나 XML 문서)의 콘텐츠 및 구조, 그리고 스타일 요소를 구조화 시켜 표현하여 프로그래밍 언어가 해당 문서에 접근하여 읽고 조작할 수 있도록 API를 제공하는 일종의 인터페이스이다. 즉 자바스크립트 같은 스크립팅 언어가 쉽게 웹 페이지에 접근하여 조작할 수 있게끔 연결시켜주는 역할을 한다.
 
-###DOM(문서 객체 모델)은 어떻게 생성되고 어떻게 보여질까?
+### DOM(문서 객체 모델)은 어떻게 생성되고 어떻게 보여질까?
 
 DOM은 웹 페이지, 즉 HTML 문서를 계층적 구조와 정보로 표현하며, 이를 제어할 수 있는 프로퍼티와 메서드를 제공하는 트리 자료구조이기도 하다. 따라서 HTML DOM, 혹은 HTML DOM Tree로 부르기도 한다.
 
@@ -94,19 +94,19 @@ DOM은 자바스크립트 없이 DOM 인터페이스 구현만으로도 DOM을 �
 자바스크립트로 DOM에 접근하는 방법은, DOM의 인터페이스를 이용하여 접근할 수 있다.
 기본적으로 브라우저 내부에 내장된 프로그래밍 언어(즉 자바스크립트)가 DOM의 API 중 자주 쓰는 메소드와 프로퍼티가 있는데,
 
-document.querySelectorAll(selectors)
-document.getElementById(id)
-document.getElementByTagName(name)
-document.createElement(name)
-node.append(node)
-node.appendChild(node)
-node.remove(node)
-node.removeChild(node)
-element.innerHTML
-node.textContent
-element.setAttribute(name, value)
-element.getAttribute(name)
-element.addEventListener(type, listener)
+* document.querySelectorAll(selectors)
+* document.getElementById(id)
+* document.getElementByTagName(name)
+* document.createElement(name)
+* node.append(node)
+* node.appendChild(node)
+* node.remove(node)
+* node.removeChild(node)
+* element.innerHTML
+* node.textContent
+* element.setAttribute(name, value)
+* element.getAttribute(name)
+* element.addEventListener(type, listener)
 
 등이 있다.
 
@@ -121,15 +121,15 @@ DOM 노드는 종류에 따라 대응하는 내장 클래스가 다르다.
 
 계층 구조 꼭대기엔 EventTarget이 있는데, Node는 EventTarget을, 다른 DOM 노드들은 Node 클래스를 상속받는다.
 
-* EventTarget - 루트에 있는 '추상(abstract) 클래스로' 이 클래스에 대응하는 객체는 실제로 만들어지지 않는다. EventTarget가 모든 DOM 노드의 베이스에 있기 때문에 DOM 노드에서 '이벤트'를 사용할 수 있다.
+* EventTarget - 루트에 있는 '추상(abstract) 클래스로' 이 클래스에 대응하는 객체는 실제로 만들어지지 않는다. EventTarget이 모든 DOM 노드의 베이스에 있기 때문에 DOM 노드에서 '이벤트'를 사용할 수 있다.
 
 * Node - 역시 '추상' 클래스로, DOM 노드의 베이스 역할을 한다. getter 역할을 하는 parentNode.
 nextsibling, childNodes 등의 주요 트리 탐색 기능을 제공한다. Node 클래스의 객체는 절대 생성되지 않는다.
 하지만 이 클래스를 상속받는 클래스는 여럿 있다. 텍스트 노드를 위한 Text 클래스와 요소 노드를 위한 Element 클래스, 주석 노드를 위한 Comment 클래스는 Node 클래스를 상속받는다.
 
-*Element - DOM 요소를 위한 베이스 클래스이다. nextElementSibling, children이나 getElementByTagName, QuerySelector 같이 요소 전용 탐색을 도와주는 프로퍼티나 메서드가 이를 기반으로 한다. 브라우저는 HTML 뿐만 아니라 XML, SVG도 지원하는데 Element 클래스는 이와 관련된 SVGElement, XMLElement, HTMLElement 클래스의 베이스 역할을 한다.
+* Element - DOM 요소를 위한 베이스 클래스이다. nextElementSibling, children이나 getElementByTagName, QuerySelector 같이 요소 전용 탐색을 도와주는 프로퍼티나 메서드가 이를 기반으로 한다. 브라우저는 HTML 뿐만 아니라 XML, SVG도 지원하는데 Element 클래스는 이와 관련된 SVGElement, XMLElement, HTMLElement 클래스의 베이스 역할을 한다.
 
-*HTMLElement - HTMl 요소 노드의 베이스 역할을 하는 클래스이다. 아래 나열한 클래스들은 실제 HTMl 요소에 대응하고 HTMLElement를 상속받는다.
+* HTMLElement - HTMl 요소 노드의 베이스 역할을 하는 클래스이다. 아래 나열한 클래스들은 실제 HTMl 요소에 대응하고 HTMLElement를 상속받는다.
 
 이렇게 특정 노드에서 사용할 수 있는 프로퍼티와 메서드는 상속을 기반으로 결정된다.
 
@@ -153,22 +153,22 @@ nodeType
 
 nodeName/tagName
 
->요소 노드의 태그 이름을 알아낼 때 사용한다. XML 모드일 때를 제외하고 태그 이름은 항상 대문자로 변환한다.
+> 요소 노드의 태그 이름을 알아낼 때 사용한다. XML 모드일 때를 제외하고 태그 이름은 항상 대문자로 변환한다.
 요소 노드가 아닌 nodeName을 사용하면 된다.
 
 innerHTML
-요소 안의 HTML을 알아낼 수 있다. 이 프로퍼티를 사용하면 요소 안의 HTML을 수정할 수도 있다.
+> 요소 안의 HTML을 알아낼 수 있다. 이 프로퍼티를 사용하면 요소 안의 HTML을 수정할 수도 있다.
 
 outerHTML
-요소의 전체 HTML을 알아낼 수 있다.
+> 요소의 전체 HTML을 알아낼 수 있다.
 
 nodeValue/data
-요소가 아닌 노드(텍스트,주석 노드 등)의 내용을 읽을 때 쓰인다. 두 프로퍼티는 거의 동일하게 동작한다.
+> 요소가 아닌 노드(텍스트,주석 노드 등)의 내용을 읽을 때 쓰인다. 두 프로퍼티는 거의 동일하게 동작한다.
 주로 data를 많이 사용하는 편이며 내용을 수정할 때도 이 프로퍼티를 쓸 수 있다.
 
 textContent
-HTML에서 모든 태그를 제외한 텍스트만 읽을 때 사용한다. 할당 연산을 통해 무언가를 쓸 수 있는데 이 때 태그를 포함한 모든 특수문자는 문자열로 처리된다. 사용자가 입력한 문자를 안전한 방법으로 처리하기 때문에 원치 않는 HTMl이 사이트에 삽입되는 것을 예방할 수 있다.
+> HTML에서 모든 태그를 제외한 텍스트만 읽을 때 사용한다. 할당 연산을 통해 무언가를 쓸 수 있는데 이 때 태그를 포함한 모든 특수문자는 문자열로 처리된다. 사용자가 입력한 문자를 안전한 방법으로 처리하기 때문에 원치 않는 HTMl이 사이트에 삽입되는 것을 예방할 수 있다.
 
 
 hidden
-true로 설정하면 CSS에서 display; none을 설정한 것과 동일하게 동작한다.
+> true로 설정하면 CSS에서 display; none을 설정한 것과 동일하게 동작한다.

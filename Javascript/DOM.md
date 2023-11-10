@@ -121,7 +121,7 @@ DOM 노드는 종류에 따라 대응하는 내장 클래스가 다르다.
 
 계층 구조 꼭대기엔 EventTarget이 있는데, Node는 EventTarget을, 다른 DOM 노드들은 Node 클래스를 상속받는다.
 
-* EventTarget - 루트에 있는 '추상(abstract) 클래스로' 이 클래스에 대응하는 객체는 실제로 만들어지지 않는다. EventTarget가 모든 DOM 노드의 베이스에 있기 때문에 DOM 노드에서 '이벤트'를 사용할 수 있다.
+* EventTarget - 루트에 있는 '추상(abstract) 클래스로' 이 클래스에 대응하는 객체는 실제로 만들어지지 않는다. EventTarget이 모든 DOM 노드의 베이스에 있기 때문에 DOM 노드에서 '이벤트'를 사용할 수 있다.
 
 * Node - 역시 '추상' 클래스로, DOM 노드의 베이스 역할을 한다. getter 역할을 하는 parentNode.
 nextsibling, childNodes 등의 주요 트리 탐색 기능을 제공한다. Node 클래스의 객체는 절대 생성되지 않는다.

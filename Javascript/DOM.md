@@ -172,3 +172,22 @@ textContent
 
 hidden
 > true로 설정하면 CSS에서 display; none을 설정한 것과 동일하게 동작한다.
+
+### 문서 수정하기
+
+* 노드 생성 메서드:
+    * document.createElement(tag) - 태그 이름을 사용해 새로운 요소를 만듦
+    * document.createTextNode(value) - 텍스트 노드를 만듦(잘 쓰이지 않음)
+    * elem.cloneNode(deep) - 요소를 복제함
+        deep==true 일 경우 모든 자손 요소도 복제됨
+* 노드 삽입, 삭제 메서드:
+    * node.append(노드나 문자열) - node 끝에 노드를 삽입
+    * node.prepend(노드나 문자열) - node 맨 앞에 노드를 삽입
+    * node.before(노드나 문자열) - node 이전에 노드를 삽입
+    * node.after(노드나 문자열) - node 다음에 노드를 삽입
+    * node.replaceWith(노드나 문자열) - node를 대체
+    * node.remove() - node를 제거
+
+
+문자열을 삽입, 삭제할 땐 문자열을 '그대로' 넣으면 된다.
+
